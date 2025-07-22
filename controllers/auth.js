@@ -51,6 +51,11 @@ router.post('/sign-in', async (req, res) => {
 
     res.redirect('/');
 
-})
+});
+
+router.get('/sign-out', (req, res) => {
+    res.session.destroy()
+    res.redirect('/');
+});
 
 module.exports = router;
