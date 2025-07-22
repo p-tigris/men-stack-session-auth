@@ -54,7 +54,7 @@ router.post('/sign-in', async (req, res) => {
 });
 
 router.get('/sign-out', (req, res) => {
-    res.session.destroy()
+    req.session.destroy()
     res.redirect('/');
 });
 
